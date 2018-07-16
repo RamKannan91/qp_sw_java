@@ -88,7 +88,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="addQuestion.html" class="nav-link active">
+                            <a href="addQuestion.html" class="nav-link">
                                 <i class="nav-icon fa fa-plus"></i>
                                 <p>
                                     Add Questions
@@ -96,7 +96,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="GenerateQuestion.html" class="nav-link">
+                            <a href="GenerateQuestion.html" class="nav-link ">
                                 <i class="nav-icon fa fa-cogs"></i>
                                 <p>
                                     Generate Questions
@@ -104,7 +104,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="ImportQuestion.html" class="nav-link">
+                            <a href="ImportQuestion.html" class="nav-link active">
                                 <i class="nav-icon fa fa-upload"></i>
                                 <p>
                                     Import Questions
@@ -132,75 +132,28 @@
                     <!-- SELECT2 EXAMPLE -->
                     <div class="card card-default">
                         <div class="card-header">
-                            <h3 class="card-title">Add a New Question</h3>
+                            <h3 class="card-title">Import Questions</h3>
                         </div>
-                        <!-- /.card-header -->
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Subject Code</label>
-                                        <input type="text" class="form-control" placeholder="Subject Code">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Mark</label>
-                                        <input type="text" class="form-control" placeholder="Mark">
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Subject Name</label>
-                                        <input type="text" class="form-control" placeholder="Subject Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Difficulty Level</label>
-                                        <select class="form-control select2" style="width: 100%;">
-                                            <option value="">Select</option>
-                                            <option>Easy</option>
-                                            <option>Average</option>
-                                            <option>Difficult</option>
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="nav-tabs-custom">
-                                            <ul class="nav nav-tabs">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="#tab_1" data-toggle="tab">Question</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#tab_2" data-toggle="tab">Answer</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="tab_1">
-                                                    <div>
-                                                        <textarea id="questionEditor" name="questionEditor" style="width: 100%;height: 100px;">Enter the question</textarea>
-                                                    </div>
-                                                </div>
-                                                <!-- /.tab-pane -->
-                                                <div class="tab-pane" id="tab_2">
-                                                    <div>
-                                                        <textarea id="answerEditor" name="answerEditor" style="width: 100%;height: 100px;">Enter the answers (Optional)</textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <label>Select a File (.xls or .xlsx)</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         <div class="card-footer">
-                            <button type="button" class="btn btn-default float-right">Cancel</button>
-                            <button type="submit" class="btn btn-success float-right marginRgt20">Save</button>
+                            <div class="fleft">
+                                <a href="assets/QuestionTemplate.xlsx" download style="cursor:pointer;text-decoration: underline">Download Template</a>
+                            </div>
+                            <button type="button" class="btn btn-default float-right">Clear</button>
+                            <button type="submit" class="btn btn-success float-right marginRgt20">Import</button>
                         </div>
                     </div>
             </section>
@@ -264,26 +217,6 @@
     <script src="plugins/ckeditor/ckeditor.js"></script>
     <script src="plugins/datatables/dataTables.bootstrap4.js"></script>
     <!-- page script -->
-    <script>
-        $(function () {
-            $('#example1').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false
-            });
-
-            $('#questionEditor').wysihtml5({
-                toolbar: { fa: true }
-            });
-            $('#answerEditor').wysihtml5({
-                toolbar: { fa: true }
-            })
-
-        });
-    </script>
 </body>
 
 </html>
